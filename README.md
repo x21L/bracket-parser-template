@@ -3,8 +3,8 @@ Deadline 29.12 23:00
 
 ## Task
 In the resources folder you will find a text file. Your task is to parse this file and check if the 
-every opening `{` has also a closing one `}`. For example the following example is valid:
-
+every opening `{` has a closing `}`. For example look at
+following valid file. You do not care about other elements besides `{}`.
 ~~~
 {
     {
@@ -13,7 +13,7 @@ every opening `{` has also a closing one `}`. For example the following example 
 }
 ~~~
 
-If you are missing a opening bracket you should throw a `ParsingException` with the following message:
+If you are missing an opening bracket you should throw a `ParsingException` with the following message:
 
 ~~~
 Error parsing the file. { expected
@@ -27,7 +27,7 @@ Error parsing the file. } expected
 
 You should not parse on and find more errors.
 
-An invakid example could look like this:
+An invalid example could look like this:
 
 ~~~
 {
@@ -76,13 +76,13 @@ A screenshot is sufficient.
 
 ![test summary](./assignment_images/stats.png)
 
-In can be found in
+It can be found in:
 
 ~~~
 path to your project/bracketparser/build/reports/tests/test/index.html
 ~~~
 
-## Tips
+# Tips
 You can print out the current element which you are parsing. You do not
 need this for your submission.
 
