@@ -38,7 +38,7 @@ class ParserTest {
     @DisplayName("Check if the correct exception is thrown }")
     void missingClosingBracket() {
         ParsingException thrown = Assertions.assertThrows(ParsingException.class, () -> {
-            new Parser().parseFile("missing}.txt");
+            new Parser().parseFile("missing_closed_bracket.txt");
         });
 
         assertEquals("Error parsing the file. } expected", thrown.getMessage());
@@ -48,7 +48,7 @@ class ParserTest {
     @DisplayName("Check if the correct exception is thrown {")
     void missingOpeningBracket() {
         ParsingException thrown = Assertions.assertThrows(ParsingException.class, () -> {
-            new Parser().parseFile("missing{.txt");
+            new Parser().parseFile("missing_open_bracket.txt");
         });
 
         assertEquals("Error parsing the file. { expected", thrown.getMessage());

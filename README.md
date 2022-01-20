@@ -1,5 +1,4 @@
 # Bracket Parser
-Deadline 29.12 23:00
 
 ## Task
 In the resources folder you will find a text file. Your task is to parse this file and check if the 
