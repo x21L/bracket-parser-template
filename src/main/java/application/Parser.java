@@ -19,10 +19,26 @@ public class Parser {
     }
 
     public void parseFile(final String filename) throws ParsingException {
+        try {
+            Path path = Paths.get(Objects.requireNonNull(Parser.class.getClassLoader().getResource(filename)).toURI());
+            parse(path);
+        } catch (URISyntaxException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     public Deque<Character> getElementStack() {
         return elementStack;
+    }
+
+    private void parse(Path path) throws ParsingException {
+        try (Stream<String> lineStream = Files.lines(path)) {
+            for (String line : lineStream.toList()) {
+                // get the line as string
+            }
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
     }
 }
 
